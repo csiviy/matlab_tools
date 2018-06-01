@@ -1,13 +1,17 @@
-function trim_axes(varargin)
-% TRIM_AXES Trim axes, similar to seaborn.despine(trim=True)
+function trimAxes(varargin)
+% TRIMAXES Trim axes, similar to seaborn.despine(trim=True)
 % 
 % 
 %     USAGE:
-%         trim_axes(varargin)
+%         trimAxes(varargin)
 %
 %
 %     INPUTS:
-%         varargin: 
+%         varargin:
+%                   'ax': The axes object to use
+%                 'grow': If true, will grow the axes a little before
+%                         trimming. If false (default), will just use the
+%                         axes ticks.
 %
 %
 %     OUTPUTS:
@@ -16,7 +20,7 @@ function trim_axes(varargin)
 %     SEE ALSO:
 %
 %
-% Chris Siviy, 01-Jun-2018 10:28 AM
+% Chris Siviy, 01-Jun-2018 11:06 AM
 
 % Parse inputs
 p = inputParser();
