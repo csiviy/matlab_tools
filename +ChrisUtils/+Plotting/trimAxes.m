@@ -24,8 +24,8 @@ function trimAxes(varargin)
 
 % Parse inputs
 p = inputParser();
-p.addParameter('ax', gca, @(x) isa(x, 'matlab.graphics.axis.Axes'))
-p.addParameter('grow', false)
+p.addOptional('ax', gca, @(x) isa(x, 'matlab.graphics.axis.Axes'))
+p.addOptional('grow', false)
 
 p.parse(varargin{:})
 
